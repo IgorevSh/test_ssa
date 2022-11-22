@@ -19,7 +19,6 @@ class TableService {
                 },
             }
         });
-        console.log(response.data)
         return response.data
     }
     async createStockItem(data) {

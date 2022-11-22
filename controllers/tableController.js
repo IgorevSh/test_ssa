@@ -2,7 +2,6 @@ const { tableService } = require("../services/tableService");
 
 class TableController {
     async getHook(req, res, next) {
-        console.log(req.body)
       const form=await tableService.getHook(req.body);
         return res.json(form);
     }
