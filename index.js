@@ -8,7 +8,7 @@ app.use("/onlisten",router);
 app.use(cors({ origin: "*" }));
 const start = async () => {
     try {
-        app.listen(port, "127.0.0.1", () => {
+        app.listen(port, "0.0.0.0", () => {
             console.log("Сервер ожидает подключения...");
         });
     } catch (e) {
