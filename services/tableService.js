@@ -6,13 +6,13 @@ let header={
         "Authorization":' Basic '+base64data
 };
 class TableService {
-    async getHook() {
+    async getHook(data) {
 
         const response = await axios.get('https://test.bpium.ru/api/webrequest/request');
         await axios({
             method: 'patch',
             headers:header,
-            url: `https://test_ssa.bpium.ru/api/v1/catalogs/12/records/1`,
+            url: `https://test_ssa.bpium.ru/api/v1/catalogs/${data.payload.catalogId}/records/${data.payload.recordId}`,
             data: {
                 values: {
                     "3":response.data.value
