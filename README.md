@@ -1,7 +1,7 @@
 # test_ssa
 Запустить
 ```
-npm test 
+npm run test 
 ```
 в корне проекта
 
